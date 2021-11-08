@@ -16,6 +16,8 @@ namespace APIProduct.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Produces("application/json")]
+    [ProducesResponseType(typeof(string), StatusCodes.Status500InternalServerError)]
     public class ProductController : ControllerBase
     {
         

@@ -30,7 +30,16 @@ namespace APIProduct
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "APIProduct", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Product API",
+                    Version = "v1",
+                    Description = "This API is use to retrieve products from the backend service.",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Md Sadiq",
+                    },
+                });
             });
         }
 
@@ -41,7 +50,7 @@ namespace APIProduct
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "APIProduct v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Product v1"));
             }
 
             app.UseHttpsRedirection();
