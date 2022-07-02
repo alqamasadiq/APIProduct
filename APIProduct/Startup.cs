@@ -79,7 +79,7 @@ namespace APIProduct
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.RoutePrefix = "swagger";
+                c.RoutePrefix = string.Empty;
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1");
 
                 // custom CSS
